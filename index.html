@@ -6,42 +6,71 @@
   <title>이명덕 - 포트폴리오</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: 'Noto Sans KR', sans-serif;
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      background: #f9f9f9;
+      background: #f5f7fa;
       color: #333;
     }
-    header, section, footer {
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-    header {
+
+    header, footer {
       background: #004080;
       color: white;
       text-align: center;
+      padding: 2rem 1rem;
     }
+
     h1, h2 {
       margin-top: 0;
     }
+
     nav a {
       margin: 0 10px;
       color: white;
       text-decoration: none;
     }
-    .project, .experience {
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 1rem;
-      margin-bottom: 1rem;
+
+    .section {
+      background: white;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
+
+    .project, .timeline-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .timeline {
+      list-style: none;
+      padding-left: 0;
+      border-left: 4px solid #004080;
+      margin: 1rem 0;
+    }
+
+    .timeline-item {
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -9px;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      background: #004080;
+      border-radius: 50%;
+    }
+
     footer {
-      background: #eee;
-      text-align: center;
       font-size: 0.9rem;
-      color: #666;
     }
+
     a.button {
       display: inline-block;
       margin-top: 10px;
@@ -51,7 +80,12 @@
       text-decoration: none;
       border-radius: 4px;
     }
+
+    a.button:hover {
+      background: #003060;
+    }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -66,14 +100,14 @@
   </nav>
 </header>
 
-<section id="about">
-  <h2>소개</h2>
+<section id="about" class="section">
+  <h2>👤 소개</h2>
   <p>안녕하세요, 저는 자동차 회사에서 16년째 근무 중인 <strong>평범한 직장인</strong>입니다.</p>
   <p>생산기획, 제품 개발, 배터리셀 공정 등 다양한 분야의 경험을 통해 현장의 복합적인 문제를 해결해왔으며, 현재는 <strong>GMTCK AVD ME 팀장</strong>으로 팀을 이끌고 있습니다.</p>
 </section>
 
-<section id="projects">
-  <h2>프로젝트</h2>
+<section id="projects" class="section">
+  <h2>🛠️ 프로젝트</h2>
   <div class="project">
     <h3>소형 SUV 트랙스 개발 및 생산 참여</h3>
     <p>글로벌 B-SUV 시장을 겨냥한 트랙스 차량의 개발 및 양산 초기 셋업에 참여하였습니다. 조립성 검토 및 품질 안정화 활동 수행.</p>
@@ -88,34 +122,38 @@
   </div>
 </section>
 
-<section id="experience">
-  <h2>이력</h2>
-  <div class="experience">
-    <h3>GMTCK AVD ME 팀장 (최근 3년)</h3>
-    <p>생산기술, 자동화, 개발/공정/품질 통합 기술 검토 주도</p>
+<section id="experience" class="section">
+  <h2>📌 이력 (타임라인)</h2>
+  <ul class="timeline">
+    <li class="timeline-item">
+      <strong>2007–2012</strong> – B-SUV 조립공정(MIM) 엔지니어<br/>
+      트랙스 및 관련 플랫폼의 생산 준비 및 품질 개선 활동
+    </li>
+    <li class="timeline-item">
+      <strong>2013–2017</strong> – 생산 전략 기획 담당<br/>
+      중장기 생산계획, 설비/투자 전략 수립
+    </li>
+    <li class="timeline-item">
+      <strong>2018–2019</strong> – 배터리셀 프로세스 엔지니어<br/>
+      얼티엄 셀 공장 설비 및 공정 도입 기술검토
+    </li>
+    <li class="timeline-item">
+      <strong>2020–현재</strong> – AVD ME 팀장<br/>
+      생산기술, 자동화, 개발/공정/품질 통합 기술 검토 주도
+    </li>
+  </ul>
+
+  <div class="timeline-item" style="margin-top: 2rem;">
+    <h3>🎓 학력</h3>
+    <p><strong>성균관대학교</strong> – 바이오메카트로닉스학과</p>
+    <p><strong>연세대학교</strong> – MBA 경영전문대학원 석사</p>
   </div>
-  <div class="experience">
-    <h3>배터리셀 프로세스 엔지니어 (1년)</h3>
-    <p>얼티엄 셀 공장 설비 및 공정 도입 기술검토</p>
-  </div>
-  <div class="experience">
-    <h3>생산 전략 기획 담당 (5년)</h3>
-    <p>중장기 생산계획, 설비/투자 전략 수립</p>
-  </div>
-  <div class="experience">
-    <h3>B-SUV 생산기술 엔지니어 (5년)</h3>
-    <p>트랙스 및 관련 플랫폼의 생산 준비 및 품질 개선 활동</p>
-  </div>
-  <div class="experience">
-    <h3>학력</h3>
-    <p>성균관대학교 - 바이오메카트로닉스학과</p>
-    <p>연세대학교 - MBA 경영전문대학원 석사</p>
-  </div>
+
   <a class="button" href="resume.pdf" download>📄 이력서 다운로드</a>
 </section>
 
-<section id="contact">
-  <h2>연락처</h2>
+<section id="contact" class="section">
+  <h2>📬 연락처</h2>
   <p>Email: <a href="mailto:mdlee@example.com">mdlee@example.com</a></p>
   <p>GitHub: <a href="https://github.com/mdlee" target="_blank">github.com/mdlee</a></p>
   <p>LinkedIn: <a href="https://linkedin.com/in/mdlee" target="_blank">linkedin.com/in/mdlee</a></p>
@@ -127,3 +165,4 @@
 
 </body>
 </html>
+
